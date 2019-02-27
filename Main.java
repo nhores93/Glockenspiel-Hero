@@ -1,4 +1,3 @@
-package songs;
 import java.util.Scanner;
 
 /**
