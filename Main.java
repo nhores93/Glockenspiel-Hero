@@ -59,8 +59,12 @@ public class Main {
         String choices[] = {"Play Song", "Play Game"};
         int choice = menuChoice(choices);
         if (choice == 1) {
-            System.out.print("Enter the speed to play the song. \n 1 will play at a normal frequency. \n 2 will play at a slower frequency etc. ");
+            System.out.print("How fast should the song be played? Enter a number equal to or larger than 1: ");
             int speed = getInt();
+            while(speed < 0) {
+            	System.out.println("Enter a number larger than 0:");
+            	speed = getInt();
+            }
             Song s = new Song(notes, name, speed);
             s.playSong();
         } else if (choice == 2) {
